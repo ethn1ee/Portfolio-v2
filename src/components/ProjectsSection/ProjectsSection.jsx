@@ -4,15 +4,16 @@ import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faFigma } from "@fortawesome/free-brands-svg-icons";
 
 import "./ProjectsSection.css";
-import { useState } from "react";
+import { useContext } from "react";
+import { ActiveProjectContext } from "../../pages/Home";
 
 const ProjectsSection = (props) => {
   const { title, data, icon } = props;
-  const [active, setActive] = useState(-1);
+  const [activeProject, setActiveProject] = useContext(ActiveProjectContext);
 
   const handleClick = (id) => {
-    if (active === id) setActive(-1);
-    else setActive(id);
+    if (activeProject === id) setActiveProject(-1);
+    else setActiveProject(id);
   };
 
   return (
@@ -21,11 +22,12 @@ const ProjectsSection = (props) => {
         {icon}
         <h2>{title}</h2>
       </div>
+
       <div className="section-content">
         {data.map((item) => (
           <Project
             item={item}
-            isActive={active === item.id}
+            isActive={activeProject === item.id}
             onClick={() => handleClick(item.id)}
             key={item.id}
           />

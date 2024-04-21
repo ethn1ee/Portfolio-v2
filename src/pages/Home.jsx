@@ -8,8 +8,13 @@ import projects from "../../public/data/projects.json";
 import doodles from "../../public/data/doodles.json";
 import Collage from "../components/Collage/Collage.jsx";
 
+import { createContext, useState } from "react";
+
+export const ActiveProjectContext = createContext();
+
 const Home = () => {
   const title = ["Web Developer", "UX Designer", "Software Engineer"];
+  const [activeProject, setActiveProject] = useState(-1);
 
   return (
     <>
@@ -21,19 +26,27 @@ const Home = () => {
         <SocialLinks />
       </div>
       <div id="main-column">
-        <ProjectsSection
-          title="Projects"
-          data={projects.data}
-          icon={<FontAwesomeIcon icon={faShapes} size="lg" />}
-        />
-        <ProjectsSection
+        <ActiveProjectContext.Provider
+          value={[activeProject, setActiveProject]}
+        >
+          <ProjectsSection
+            title="Projects"
+            data={projects.data}
+            icon={<FontAwesomeIcon icon={faShapes} size="lg" />}
+          />
+          <ProjectsSection
           title="Doodles"
           data={doodles.data}
           icon={<FontAwesomeIcon icon={faDrawPolygon} size="lg" />}
         />
+        </ActiveProjectContext.Provider>
       </div>
       <div id="collage-container">
-        <Collage />
+        <ActiveProjectContext.Provider
+          value={[activeProject, setActiveProject]}
+        >
+          <Collage />
+        </ActiveProjectContext.Provider>
       </div>
     </>
   );

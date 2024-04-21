@@ -24,11 +24,11 @@ const SocialLinks = () => {
       />
       <IconContainer
         icon={<FontAwesomeIcon className="social-icon" icon={faLinkedin} />}
-        link={links.github}
+        link={links.linkedin}
       />
       <IconContainer
         icon={<FontAwesomeIcon className="social-icon" icon={faGithub} />}
-        link={links.linkedin}
+        link={links.github}
       />
     </div>
   );

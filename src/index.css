@@ -6,9 +6,13 @@ body {
   --layer-background-color: rgba(242, 244, 243, 0.08);
   --layer-hover-color: rgba(242, 244, 243, 0.24);
 
+  font-family: "Nunito", sans-serif;
   background-color: var(--background-color);
   color: #fff;
   margin: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -17,6 +21,8 @@ body {
 #root {
   display: flex;
   gap: 80px;
+  width: 100%;
+  height: 100%;
 }
 
 .hero-text {

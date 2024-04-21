@@ -1,10 +1,9 @@
 {
   "data": [
     {
-      "id": 0,
+      "id": 4,
       "title": "Wordle Reimagined",
       "content": "Another approach to the game of Wordle, where you can level your game up!",
-      "thumbnail": "src/assets/thumbnails/wordle-reimagined.png",
       "links": [
         {
           "site": "github",
@@ -13,10 +12,9 @@
       ]
     },
     {
-      "id": 1,
+      "id": 5,
       "title": "Pixel Runner",
       "content": "Classic running game replicated with Python utilizing the pygame library.",
-      "thumbnail": "src/assets/thumbnails/pixelrunner.png",
       "links": [
         {
           "site": "github",
@@ -25,10 +23,9 @@
       ]
     },
     {
-      "id": 2,
+      "id": 6,
       "title": "Movie Recommender",
       "content": "An item-based collaborative filtering with fast KNN algorithm to recommend top 10 similar movies.",
-      "thumbnail": "src/assets/thumbnails/movie-recommendation-system.jpg",
       "links": [
         {
           "site": "github",
