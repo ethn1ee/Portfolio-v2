@@ -7,7 +7,7 @@ import "./SocialLinks.css";
 const SocialLinks = () => {
   const links = {
     email: "lth20031021@gmail.com",
-    portfolio: "ethn1ee.github.io/Portfolio-ver2/",
+    portfolio: "https://ethn1ee.github.io/Portfolio-ver2/",
     github: "https://github.com/ethn1ee",
     linkedin: "https://www.linkedin.com/in/ethn1ee/",
   };
