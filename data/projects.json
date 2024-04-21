@@ -5,7 +5,6 @@
       "title": "RIDEmory",
       "subtitle": "Emory campus ride-sharing platform",
       "content": "A self-updating database of ride information for Emory students accessible via web and GroupMe.",
-      "thumbnail": "src/assets/thumbnails/ridemory.png",
       "links": [
         {
           "site": "github",
@@ -18,7 +17,6 @@
       "title": "Web Portfolio",
       "subtitle": "My personal portfolio website",
       "content": "A website showcasing projects, experiences, and my interests, built with React.js ensuring seamless navigation and responsive design.",
-      "thumbnail": "src/assets/thumbnails/portfolio.png",
       "links": [
         {
           "site": "other",
@@ -32,10 +30,21 @@
     },
     {
       "id": 2,
+      "title": "Stack",
+      "subtitle": "A journal for selfie-lovers",
+      "content": "A social media platform that allows users to post photos and combine them with music, creating a unique and personalized timelapse.",
+      "links": [
+        {
+          "site": "other",
+          "url": "https://aware-aura-e01.notion.site/Loop-Musical-Social-Media-a129c6c4ca63469eac07b23525702727"
+        }
+      ]
+    },
+    {
+      "id": 3,
       "title": "Loop",
       "subtitle": "Musical social media",
       "content": "An accessible and socially engaging listening platform to freely post music, moods, and tweets on top of its streaming service.",
-      "thumbnail": "src/assets/thumbnails/loop.png",
       "links": [
         {
           "site": "other",
