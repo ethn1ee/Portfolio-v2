@@ -1,0 +1,27 @@
+#social-links-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.social-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+
+  background: var(--layer-background-color);
+  border-radius: 50%;
+
+  transition: background 0.3s ease-out;
+}
+
+.social-icon-container:hover {
+  background: var(--layer-hover-color);
+}
+
+.social-icon {
+  color: var(--emphasis-color);
+}
