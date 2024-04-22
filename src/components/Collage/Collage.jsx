@@ -7,7 +7,7 @@ import projects from "../../../public/data/projects.json";
 import doodles from "../../../public/data/doodles.json";
 
 const Collage = () => {
-  const [activeProject, setActiveProject] = useContext(ActiveProjectContext);
+  const activeProject = useContext(ActiveProjectContext)[0];
   const project =
     activeProject === -1
       ? "Default"
