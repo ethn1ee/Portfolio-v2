@@ -6,6 +6,7 @@ import { faGithub, faFigma } from "@fortawesome/free-brands-svg-icons";
 import "./ProjectsSection.css";
 import { useContext } from "react";
 import { ActiveProjectContext } from "../../pages/Home";
+import { motion } from "framer-motion";
 
 const ProjectsSection = (props) => {
   const { title, data, icon } = props;
@@ -18,12 +19,22 @@ const ProjectsSection = (props) => {
 
   return (
     <div className="projects-section">
-      <div className="section-title">
+      <motion.div
+        className="section-title"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.3 }}
+      >
         {icon}
         <h2>{title}</h2>
-      </div>
+      </motion.div>
 
-      <div className="section-content">
+      <motion.div
+        className="section-content"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.6 }}
+      >
         {data.map((item) => (
           <Project
             item={item}
@@ -32,7 +43,7 @@ const ProjectsSection = (props) => {
             key={item.id}
           />
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

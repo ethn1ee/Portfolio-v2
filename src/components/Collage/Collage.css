@@ -32,11 +32,6 @@
   transition: all 0.3s ease-out;
 }
 
-.frame-sm:hover,
-.frame-lg:hover {
-  transform: scale(1.03);
-}
-
 .collage-img {
   object-fit: cover;
   width: 100%;

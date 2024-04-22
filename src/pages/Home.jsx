@@ -9,6 +9,7 @@ import doodles from "../../public/data/doodles.json";
 import Collage from "../components/Collage/Collage.jsx";
 
 import { createContext, useState } from "react";
+import { motion } from "framer-motion";
 
 export const ActiveProjectContext = createContext();
 
@@ -18,13 +19,19 @@ const Home = () => {
 
   return (
     <>
-      <div id="sidebar">
+      <motion.div
+        id="sidebar"
+        layout
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
         <div className="hero-text" id="name">
           Ethan Lee
         </div>
         <h2 id="title">{title[0]}</h2>
         <SocialLinks />
-      </div>
+      </motion.div>
       <div id="main-column">
         <ActiveProjectContext.Provider
           value={[activeProject, setActiveProject]}
@@ -35,10 +42,10 @@ const Home = () => {
             icon={<FontAwesomeIcon icon={faShapes} size="lg" />}
           />
           <ProjectsSection
-          title="Doodles"
-          data={doodles.data}
-          icon={<FontAwesomeIcon icon={faDrawPolygon} size="lg" />}
-        />
+            title="Doodles"
+            data={doodles.data}
+            icon={<FontAwesomeIcon icon={faDrawPolygon} size="lg" />}
+          />
         </ActiveProjectContext.Provider>
       </div>
       <div id="collage-container">
