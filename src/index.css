@@ -64,3 +64,16 @@ a {
   margin: 0;
   text-decoration: none;
 }
+
+@media screen and (max-width: 800px) {
+  body {
+    overflow: auto;
+  }
+
+  #root {
+    flex-direction: column;
+    gap: 60px;
+    height: auto;
+    margin-bottom: 60px;
+  }
+}
