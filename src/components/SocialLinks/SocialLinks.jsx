@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAt, faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { motion } from "framer-motion";
 
 import "./SocialLinks.css";
 
@@ -38,14 +39,16 @@ const IconContainer = (props) => {
   const { icon, link } = props;
 
   return (
-    <a
+    <motion.a
       className="social-icon-container"
       href={link}
       target="_blank"
       rel="noopener noreferrer"
+      whileHover={{ scale: 0.85 }}
+      transition={{ duration: 0.3 }}
     >
       {icon}
-    </a>
+    </motion.a>
   );
 };
 

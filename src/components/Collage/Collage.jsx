@@ -20,7 +20,7 @@ const Collage = () => {
       className="collage"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{duration: 1.3, delay: 0.9, ease:"easeOut"}}
+      transition={{ duration: 1.3, delay: 0.9, ease: "easeOut" }}
     >
       <div className="collage-sm-grid" id="collage-row-1">
         <FrameSmall project={project} index={2} />
@@ -46,7 +46,7 @@ const FrameSmall = (props) => {
     <motion.div
       className="frame-sm"
       style={{ width: `${size.w}px`, height: `${size.h}px` }}
-      whileHover={{ scale: 1.05 }}
+      whileHover={{ scale: 1.01 }}
     >
       <AnimatePresence>
         <motion.img
@@ -61,7 +61,7 @@ const FrameSmall = (props) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           // exit={{ opacity: 0 }}
-          whileHover={{scale: 1.03}}
+          whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         />
       </AnimatePresence>
@@ -77,7 +77,7 @@ const FrameLarge = (props) => {
     <motion.div
       className="frame-lg"
       style={{ width: `${size.w}px`, height: `${size.h}px` }}
-      whileHover={{ scale: 1.05 }}
+      whileHover={{ scale: 1.01 }}
     >
       <AnimatePresence>
         <motion.img
@@ -92,7 +92,7 @@ const FrameLarge = (props) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           // exit={{ opacity: 0 }}
-          whileHover={{scale: 1.03}}
+          whileHover={{ scale: 1.03 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
         />
       </AnimatePresence>
