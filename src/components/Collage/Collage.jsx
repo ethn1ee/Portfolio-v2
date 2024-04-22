@@ -60,9 +60,8 @@ const FrameSmall = (props) => {
           key={src}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          // exit={{ opacity: 0 }}
           whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         />
       </AnimatePresence>
     </motion.div>
@@ -91,9 +90,8 @@ const FrameLarge = (props) => {
           key={src}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          // exit={{ opacity: 0 }}
           whileHover={{ scale: 1.03 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
+          transition={{ duration: 0.3, ease: "easeOut", delay: 0.2 }}
         />
       </AnimatePresence>
     </motion.div>
