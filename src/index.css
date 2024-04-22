@@ -75,5 +75,6 @@ a {
     flex-direction: column;
     gap: 60px;
     height: auto;
+    margin-bottom: 200px;
   }
 }
