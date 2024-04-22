@@ -1,9 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAt, faBriefcase } from "@fortawesome/free-solid-svg-icons";
+import { faAt, faBriefcase, faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
 
 import "./SocialLinks.css";
+import { useState } from "react";
 
 const SocialLinks = () => {
   const links = {
@@ -15,19 +16,19 @@ const SocialLinks = () => {
 
   return (
     <div id="social-links-container">
-      <IconContainer
+      <CopyButton
         icon={<FontAwesomeIcon className="social-icon" icon={faAt} />}
-        link={links.email}
+        text={links.email}
       />
-      <IconContainer
+      <LinkButton
         icon={<FontAwesomeIcon className="social-icon" icon={faBriefcase} />}
         link={links.portfolio}
       />
-      <IconContainer
+      <LinkButton
         icon={<FontAwesomeIcon className="social-icon" icon={faLinkedin} />}
         link={links.linkedin}
       />
-      <IconContainer
+      <LinkButton
         icon={<FontAwesomeIcon className="social-icon" icon={faGithub} />}
         link={links.github}
       />
@@ -35,7 +36,46 @@ const SocialLinks = () => {
   );
 };
 
-const IconContainer = (props) => {
+const CopyButton = (props) => {
+  const { icon, text } = props;
+
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 3000);
+      })
+      .catch((err) => console.error("Failed to copy: " + err));
+  };
+
+  return (
+    <>
+      <motion.div
+        className="social-icon-container"
+        onClick={handleCopy}
+        whileHover={{ scale: 0.85 }}
+        transition={{ duration: 0.3 }}
+      >
+        <motion.div
+          key={copied}
+          initial={{scale: 0}}
+          animate={{scale: 1}}
+        >
+          {copied ? (
+            <FontAwesomeIcon className="social-icon" icon={faCheck} />
+          ) : (
+            icon
+          )}
+        </motion.div>
+      </motion.div>
+    </>
+  );
+};
+
+const LinkButton = (props) => {
   const { icon, link } = props;
 
   return (

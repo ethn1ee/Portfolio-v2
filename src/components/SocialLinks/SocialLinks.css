@@ -11,6 +11,7 @@
   align-items: center;
   width: 42px;
   height: 42px;
+  cursor: pointer;
 
   background: var(--layer-background-color);
   border-radius: 50%;
