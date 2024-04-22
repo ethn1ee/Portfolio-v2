@@ -6,6 +6,6 @@
 - Framer Motion
 - FontAwesome Icons
 
-![Desktop Screenshot](https://ethn1ee.github.io/Portfolio-v2/screenshot-desktop.png){width="800px"}
+![Desktop Screenshot](https://ethn1ee.github.io/Portfolio-v2/screenshot-desktop.png)
 
-![Mobile Screenshot](https://ethn1ee.github.io/Portfolio-v2/screenshot-mobile.png){width="200px"}
+![Mobile Screenshot](https://ethn1ee.github.io/Portfolio-v2/screenshot-mobile.png)
