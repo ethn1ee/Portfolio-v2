@@ -6,5 +6,5 @@
 - Framer Motion
 - FontAwesome Icons
 
-![Desktop Screenshot](./screenshot-desktop.png)
-![Desktop Mobile](./screenshot-mobile.png)
+![Desktop Screenshot](https://ethn1ee.github.io/Portfolio-v2/screenshot-desktop.png)
+![Desktop Mobile](https://ethn1ee.github.io/Portfolio-v2/screenshot-mobile.png)
