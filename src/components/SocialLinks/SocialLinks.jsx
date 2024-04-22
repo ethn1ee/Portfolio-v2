@@ -9,7 +9,7 @@ import { useState } from "react";
 const SocialLinks = () => {
   const links = {
     email: "lth20031021@gmail.com",
-    portfolio: "https://ethn1ee.github.io/Portfolio-v2/",
+    resume: "./Ethan_Lee_resume.pdf",
     github: "https://github.com/ethn1ee",
     linkedin: "https://www.linkedin.com/in/ethn1ee/",
   };
@@ -22,7 +22,7 @@ const SocialLinks = () => {
       />
       <LinkButton
         icon={<FontAwesomeIcon className="social-icon" icon={faBriefcase} />}
-        link={links.portfolio}
+        link={links.resume}
       />
       <LinkButton
         icon={<FontAwesomeIcon className="social-icon" icon={faLinkedin} />}
@@ -59,11 +59,7 @@ const CopyButton = (props) => {
         whileHover={{ scale: 0.85 }}
         transition={{ duration: 0.3 }}
       >
-        <motion.div
-          key={copied}
-          initial={{scale: 0}}
-          animate={{scale: 1}}
-        >
+        <motion.div key={copied} initial={{ scale: 0 }} animate={{ scale: 1 }}>
           {copied ? (
             <FontAwesomeIcon className="social-icon" icon={faCheck} />
           ) : (
