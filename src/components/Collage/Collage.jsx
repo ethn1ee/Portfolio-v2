@@ -46,7 +46,7 @@ const FrameSmall = (props) => {
     <motion.div
       className="frame-sm"
       style={{ width: `${size.w}px`, height: `${size.h}px` }}
-      whileHover={{ scale: 1.01 }}
+      whileHover={{ scale: 1.02 }}
     >
       <AnimatePresence>
         <motion.img
@@ -76,7 +76,7 @@ const FrameLarge = (props) => {
     <motion.div
       className="frame-lg"
       style={{ width: `${size.w}px`, height: `${size.h}px` }}
-      whileHover={{ scale: 1.01 }}
+      whileHover={{ scale: 1.04 }}
     >
       <AnimatePresence>
         <motion.img
